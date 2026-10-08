@@ -37,7 +37,6 @@
       theme.bsPopover();
       theme.bsModal();
       theme.iTooltip();
-      theme.contactForm();
       theme.pricingSwitcher();
     },
     /**
@@ -112,7 +111,12 @@
       });
       $navbar_offcanvas_toggle.on("click", function(e) {
         e.stopPropagation();
-        $navbar_offcanvas.toggleClass('open');
+        var isOpen = !$navbar_offcanvas.hasClass('open');
+        $navbar_offcanvas.toggleClass('open', isOpen);
+        $navbar_offcanvas_toggle.attr('aria-expanded', isOpen ? 'true' : 'false');
+        if (isOpen) {
+          $navbar_offcanvas.find('a, button').filter(':visible').first().trigger('focus');
+        }
       });
       $navbar_offcanvas.on("click", function(e) {
         e.stopPropagation();
@@ -120,6 +124,8 @@
       $navbar_offcanvas_close.on("click", function(e) {
         $navbar_offcanvas.removeClass('open');
         $header_hamburger.removeClass('active');
+        $navbar_offcanvas_toggle.attr('aria-expanded', 'false');
+        $navbar_offcanvas_toggle.trigger('focus');
       });
       $info_offcanvas_toggle.on("click", function(e) {
         e.stopPropagation();
@@ -130,9 +136,17 @@
       });
       $(document).on('click', function() {
         $navbar_offcanvas.removeClass('open');
+        $navbar_offcanvas_toggle.attr('aria-expanded', 'false');
         /*$language_select.collapse('hide');*/
         $info_offcanvas.removeClass('open');
         $header_hamburger.removeClass('active');
+      });
+      $(document).on('keydown', function(e) {
+        if (e.key === 'Escape' && $navbar_offcanvas.hasClass('open')) {
+          $navbar_offcanvas.removeClass('open');
+          $header_hamburger.removeClass('active');
+          $navbar_offcanvas_toggle.attr('aria-expanded', 'false').trigger('focus');
+        }
       });
       $info_offcanvas_close.on("click", function(e) {
         $info_offcanvas.removeClass('open');
@@ -611,44 +625,6 @@
         indentY: 15,
         positionX: 'right',
         positionY: 'bottom'
-      })
-    },
-    /**
-     * Contact Form
-     */
-    contactForm: () => {
-      $('.contact-form').validator({
-        disable: false,
-        focus: false
-      });
-      // when the form is submitted
-      $('.contact-form').on('submit', function(e) {
-        // if the validator does not prevent form submit
-        if (!e.isDefaultPrevented()) {
-          var url = "php/contact.php";
-          // POST values in the background the the script URL
-          $.ajax({
-            type: "POST",
-            url: url,
-            data: $(this).serialize(),
-            success: function(data) {
-              // data = JSON object that contact.php returns
-              // we recieve the type of the message: success x danger and apply it to the
-              var messageAlert = 'alert-' + data.type;
-              var messageText = data.message;
-              // let's compose Bootstrap alert box HTML
-              var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissible fade show"><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>' + messageText + '</div>';
-              // If we have messageAlert and messageText
-              if (messageAlert && messageText) {
-                // inject the alert to .messages div in our form
-                $('.contact-form').find('.messages').html(alertBox);
-                // empty the form
-                $('.contact-form')[0].reset();
-              }
-            }
-          });
-          return false;
-        }
       })
     },
     /**

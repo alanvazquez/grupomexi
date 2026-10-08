@@ -2,19 +2,13 @@
 <html lang="es">
 
 <head>
-  <!-- Google tag (gtag.js) - Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index,follow">
   <link rel="shortcut icon" href="img/favicon.png">
   <title>Contacto | Grupo Mexi ahora es Aquapractika</title>
   <meta name="description" content="Información de contacto de Grupo Mexi, ahora Aquapractika. Conservamos esta página de transición y puedes visitar aquapractika.mx para conocer el sitio actual.">
+  <link rel="canonical" href="https://grupomexi.com.mx/contacto.html">
   <link rel="stylesheet" href="css/plugins.css">
   <link rel="stylesheet" href="css/theme/blue.css">
   <link rel="stylesheet" href="css/grupomexi-transition.css">
@@ -31,16 +25,17 @@
       <nav class="navbar center-nav transparent navbar-expand-lg navbar-light">
         <div class="container flex-lg-row flex-nowrap align-items-center">
           <div class="navbar-brand w-100"><a href="/" class="d-inline-flex flex-column align-items-start"><img src="img/logotipo_aquapractika.png" srcset="img/logotipo_aquapractika@2x.png 2x" alt="Aquapractika" /><span class="brand-transition-note">Antes Grupo Mexi</span></a></div>
-          <div class="navbar-collapse offcanvas-nav">
+          <div id="site-navigation" class="navbar-collapse offcanvas-nav">
             <div class="offcanvas-header d-lg-none d-xl-none">
               <a href="/" class="d-inline-flex flex-column align-items-start"><img src="img/logotipo_aquapractika.png" srcset="img/logotipo_aquapractika@2x.png 2x" alt="Aquapractika" /><span class="brand-transition-note">Antes Grupo Mexi</span></a>
-              <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-nav-close" aria-label="Close"></button>
+              <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-nav-close" aria-label="Cerrar menú"></button>
             </div>
             <ul class="navbar-nav">
               <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
               <li class="nav-item"><a class="nav-link" href="/#servicios">Servicios</a></li>
               <li class="nav-item"><a class="nav-link" href="/#trabajos">Trabajos realizados</a></li>
               <li class="nav-item"><a class="nav-link active" href="/contacto.html">Contacto</a></li>
+              <li class="nav-item"><a class="nav-link whatsapp-nav-link" href="https://wa.me/529212742410?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Grupo%20Mexi." target="_blank" rel="noopener noreferrer" aria-label="Contactar a Grupo Mexi por WhatsApp"><i class="uil uil-whatsapp" aria-hidden="true"></i> WhatsApp</a></li>
             </ul>
             <!-- /.navbar-nav -->
           </div>
@@ -54,7 +49,7 @@
                 <a href="https://wa.me/529212742410?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Grupo%20Mexi." class="btn btn-sm btn-whatsapp rounded" target="_blank" rel="noopener noreferrer" aria-label="Contactar a Grupo Mexi por WhatsApp"><i class="uil uil-whatsapp" aria-hidden="true"></i> WhatsApp</a>
               </li>
               <li class="nav-item d-lg-none">
-                <div class="navbar-hamburger"><button class="hamburger animate plain" data-toggle="offcanvas-nav"><span></span></button></div>
+                <div class="navbar-hamburger"><button type="button" class="hamburger animate plain" data-toggle="offcanvas-nav" aria-controls="site-navigation" aria-expanded="false" aria-label="Abrir menú"><span aria-hidden="true"></span></button></div>
               </li>
             </ul>
             <!-- /.navbar-nav -->
@@ -158,62 +153,11 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
             <h2 class="display-4 mb-3 text-center">Platícanos tus ideas.</h2>
-            <p class="lead text-center mb-10">Llena este formulario y procuraremos atenderte a la brevedad.</p>
-            <form class="contact-form" method="post" action="php/contact.php">
-              <div class="messages"></div>
-              <div class="controls">
-                <div class="row gx-4">
-                  <div class="col-md-6">
-                    <div class="form-label-group mb-4">
-                      <input id="form_name" type="text" name="name" class="form-control" placeholder="Jane" required="required" data-error="First Name is required.">
-                      <label for="form_name">Nombre *</label>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  <!-- /column -->
-                  <div class="col-md-6">
-                    <div class="form-label-group mb-4">
-                      <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Doe" required="required" data-error="Last Name is required.">
-                      <label for="form_lastname">Apellido *</label>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  <!-- /column -->
-                  <div class="col-md-6">
-                    <div class="form-label-group mb-4">
-                      <input id="form_email" type="email" name="email" class="form-control" placeholder="jane.doe@example.com" required="required" data-error="Valid email is required.">
-                      <label for="form_email">Email *</label>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  <!-- /column -->
-                  <div class="col-md-6">
-                    <div class="form-label-group mb-4">
-                      <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Your phone number">
-                      <label for="form_phone">Teléfono</label>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  <!-- /column -->
-                  <div class="col-12">
-                    <div class="form-label-group mb-4">
-                      <textarea id="form_message" name="message" class="form-control" placeholder="Your message" rows="5" required="required" data-error="Message is required."></textarea>
-                      <label for="form_message">Mensaje *</label>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  <!-- /column -->
-                  <div class="col-12 text-center">
-                    <input type="submit" class="btn btn-primary rounded-pill btn-send mb-3" value="Enviar">
-                    <p class="text-muted"><strong>*</strong>Estos campos son requeridos.</p>
-                  </div>
-                  <!-- /column -->
-                </div>
-                <!-- /.row -->
-              </div>
-              <!-- /.controls -->
-            </form>
-            <!-- /form -->
+            <p class="lead text-center mb-8">Completa nuestro formulario de contacto y procuraremos atenderte a la brevedad.</p>
+            <div class="text-center">
+              <a class="btn btn-primary rounded-pill btn-send mb-3" href="https://forms.gle/GJMM39z33NwDu5kz8" target="_blank" rel="noopener noreferrer">Abrir formulario de contacto</a>
+              <p class="text-muted mb-0">También puedes escribirnos directamente por <a href="https://wa.me/529212742410?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Grupo%20Mexi." target="_blank" rel="noopener noreferrer">WhatsApp</a>.</p>
+            </div>
           </div>
           <!-- /column -->
         </div>
@@ -255,7 +199,7 @@
             <ul class="list-unstyled text-reset mb-0">
               <li><a href="/">Inicio</a></li>
               <li><a href="https://aquapractika.mx/">Sitio actual de Aquapractika</a></li>
-              <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScCxtoqWfX-yO1uiGYzQOyiqhBLfG6tYMMcw9qU_w2GQ7MwDw/viewform?usp=publish-editor">Contacto</a></li>
+              <li><a href="https://forms.gle/GJMM39z33NwDu5kz8">Contacto</a></li>
             </ul>
           </div>
           <!-- /.widget -->

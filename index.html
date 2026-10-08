@@ -2,19 +2,13 @@
 <html lang="es">
 
 <head>
-  <!-- Google tag (gtag.js) - Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index,follow">
   <link rel="shortcut icon" href="img/favicon.png">
   <title>Grupo Mexi - Alevines de tilapia gris Stirling y roja Pargo UNAM</title>
   <meta name="description" content="Grupo Mexi ahora es Aquapractika. Conservamos nuestra información sobre alevines de tilapia Stirling y Pargo UNAM, diseño acuícola y mojarra por kilogramo.">
+  <link rel="canonical" href="https://grupomexi.com.mx/">
   <link rel="stylesheet" href="css/plugins.css">
   <link rel="stylesheet" href="css/theme/blue.css">
   <link rel="stylesheet" href="css/grupomexi-transition.css">
@@ -38,10 +32,10 @@
       <nav class="navbar classic transparent navbar-expand-lg navbar-light">
         <div class="container flex-lg-row flex-nowrap align-items-center">
           <div class="navbar-brand w-100"><a href="/" class="d-inline-flex flex-column align-items-start"><img src="img/logo_aquapractika.png" srcset="img/logo_aquapractika@2x.png 2x" alt="Aquapractika" /><span class="brand-transition-note">Antes Grupo Mexi</span></a></div>
-          <div class="navbar-collapse offcanvas-nav">
+          <div id="site-navigation" class="navbar-collapse offcanvas-nav">
             <div class="offcanvas-header d-lg-none d-xl-none">
               <a href="/" class="d-inline-flex flex-column align-items-start"><img src="img/logo_aquapractika.png" srcset="img/logo_aquapractika@2x.png 2x" alt="Aquapractika" /><span class="brand-transition-note">Antes Grupo Mexi</span></a>
-              <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-nav-close" aria-label="Close"></button>
+              <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-nav-close" aria-label="Cerrar menú"></button>
             </div>
             <ul class="navbar-nav">
               <li class="nav-item"><a class="nav-link" href="#hero">Inicio</a>
@@ -66,7 +60,7 @@
                 <a href="https://aquapractika.mx/" class="btn btn-sm btn-primary rounded">Visitar Aquapractika</a>
               </li>
               <li class="nav-item ms-lg-0">
-                <div class="navbar-hamburger d-lg-none d-xl-none ms-auto"><button class="hamburger animate plain" data-toggle="offcanvas-nav"><span></span></button></div>
+                <div class="navbar-hamburger d-lg-none d-xl-none ms-auto"><button type="button" class="hamburger animate plain" data-toggle="offcanvas-nav" aria-controls="site-navigation" aria-expanded="false" aria-label="Abrir menú"><span aria-hidden="true"></span></button></div>
               </li>
             </ul>
             <!-- /.navbar-nav -->
@@ -89,7 +83,8 @@
             <p class="mb-7 px-md-10 px-lg-0">Somos un equipo que ofrece productos y servicios de acuicultura y del sector agropecuario, con interés en el desarrollo sustentable y el uso de controles biológicos.</p>
             <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown" data-group="page-title-buttons" data-delay="900">
               <span><a class="btn btn-primary btn-icon btn-icon-start rounded me-2" href="https://aquapractika.mx/"><i class="uil uil-shop"></i> Visitar Aquapractika</a></span>
-              <span><a class="btn btn-green btn-icon btn-icon-start rounded" href="https://docs.google.com/forms/d/e/1FAIpQLScCxtoqWfX-yO1uiGYzQOyiqhBLfG6tYMMcw9qU_w2GQ7MwDw/viewform?usp=publish-editor"><i class="uil uil-envelope-heart"></i> Contacto</a></span>
+              <span><a class="btn btn-green btn-icon btn-icon-start rounded" href="https://forms.gle/GJMM39z33NwDu5kz8"><i class="uil uil-envelope-heart"></i> Contacto</a></span>
+              <span><a class="btn btn-whatsapp btn-icon btn-icon-start rounded" href="https://wa.me/529212742410?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Grupo%20Mexi." target="_blank" rel="noopener noreferrer" aria-label="Contactar a Grupo Mexi por WhatsApp"><i class="uil uil-whatsapp" aria-hidden="true"></i> WhatsApp</a></span>
             </div>
           </div>
           <!-- /column -->
@@ -254,7 +249,7 @@
           <div class="col-md-6 col-lg-3"><div class="card h-100"><div class="card-body"><h3 class="h4 card-title">Mojarra</h3><p class="mb-0">Venta por kilogramo. Consulta disponibilidad y opciones de entrega.</p></div></div></div>
           <div class="col-md-6 col-lg-3"><div class="card h-100"><div class="card-body"><h3 class="h4 card-title">Equipos</h3><p class="mb-0">Bombas, aireadores, piedras aireadoras y mallas. Solicita información.</p></div></div></div>
         </div>
-        <div class="text-center mt-8"><a class="btn btn-primary rounded" href="https://docs.google.com/forms/d/e/1FAIpQLScCxtoqWfX-yO1uiGYzQOyiqhBLfG6tYMMcw9qU_w2GQ7MwDw/viewform?usp=publish-editor">Contacto</a></div>
+        <div class="text-center mt-8"><a class="btn btn-primary rounded" href="https://forms.gle/GJMM39z33NwDu5kz8">Contacto</a></div>
       </div>
     </section>
     <section id="screenshots" class="wrapper bg-light">
