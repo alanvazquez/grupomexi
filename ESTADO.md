@@ -18,7 +18,7 @@ Implementado en `index.html`, `contacto.html` y `css/grupomexi-transition.css`:
 - Los CTA de contacto dirigen directamente a WhatsApp (+52 921 274 2410); se retiraron los botones de formulario/correo porque la vía preferida de atención es WhatsApp.
 - Contacto mantiene teléfono y dirección heredados de Grupo Mexi; el correo dejó de mostrarse como canal de contacto principal.
 
-Estado: implementado en HTML/CSS; vista visual móvil/escritorio pendiente porque el navegador bloqueó la preview local.
+Estado: implementado en HTML/CSS; preview pública revisada en móvil y escritorio después del despliegue.
 
 ## L01-B — Contenido y navegación histórica
 
@@ -36,12 +36,13 @@ Estado: contenido y estructura implementados; aceptación visual/funcional pendi
 
 - Inspección de código: title y H1 coinciden con el valor acordado; recursos principales y fotos de trabajos existen en la copia.
 - No se ejecutaron pruebas de accesibilidad, Lighthouse ni apertura de WhatsApp desde un navegador real.
+- Verificación pública: `grupomexi.com.mx`, `www.grupomexi.com.mx` y `contacto.html` respondieron HTTP 200; el H1 histórico se conserva y no quedan enlaces `forms.gle`.
+- Preview responsive: el CTA de portada muestra solo «Visitar Aquapractika» y «WhatsApp» sin encimarse; el botón flotante permanece disponible.
 - La consulta externa no pudo confirmar `aquapractika.mx` ni `presupuesto.php`; ver INVENTARIO_ENLACES_L01.md.
 - El servidor local fue rechazado por permisos de red del entorno y el navegador bloqueó el protocolo `file:`. No se usó una ruta alternativa para eludir el bloqueo. La preview visual sigue pendiente.
 
 ## Pendiente
 
-- Abrir/revisar la copia visualmente en móvil y escritorio.
 - L01-C: revisar cada destino y terminar el inventario de enlaces.
 - L01-D: revisión y entrega global de L01.
 - L05: verificar e integrar el backend del cotizador si se requiere un flujo distinto a WhatsApp.
