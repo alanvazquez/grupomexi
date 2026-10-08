@@ -1,0 +1,14 @@
+.brand-transition-note {
+  display: block;
+  margin-top: 0.2rem;
+  color: #343f52;
+  font-size: 0.58rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.section-anchor {
+  display: block;
+  height: 0;
+  scroll-margin-top: 5rem;
+}
