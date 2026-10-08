@@ -24,10 +24,11 @@ Estado: implementado en HTML/CSS; preview pública revisada en móvil y escritor
 
 Implementado en `index.html`:
 
-- Recuperados los bloques de alevines Stirling/Pargo UNAM, diseño de módulos, mojarra por kilogramo, equipos y trabajos.
+- Conservados los contenidos útiles de alevines Stirling/Pargo UNAM, diseño de módulos, mojarra por kilogramo, equipos y trabajos en las secciones activas.
 - Restablecidos los IDs `#hero`, `#features`, `#pricing`, `#screenshots`; agregados alias `#servicios` y `#trabajos`.
 - Añadida sección de productos y cotización, sin publicar precios antiguos como vigentes.
 - Conservadas imágenes locales de trabajos Grupo Mexi.
+- Eliminados los bloques duplicados de transición y presentación de servicios solicitados por el usuario.
 - Retirados testimonios y FAQ comerciales provenientes del mockup Aquapractika cuya vigencia no estaba confirmada.
 
 Estado: contenido y estructura implementados; aceptación visual/funcional pendiente de preview.
