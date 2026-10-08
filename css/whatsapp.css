@@ -1,11 +1,18 @@
 .whatsapp-nav-link {
-  color: #128c7e !important;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.4rem 0.8rem !important;
+  border-radius: 0.4rem;
+  background-color: #25d366;
+  color: #fff !important;
   font-weight: 600;
 }
 
 .whatsapp-nav-link:hover,
 .whatsapp-nav-link:focus-visible {
-  color: #075e54 !important;
+  background-color: #128c7e;
+  color: #fff !important;
 }
 
 .btn-whatsapp {
